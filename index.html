@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div id="top_container"></div>
+    <nav class="navbar">
+        <div><a href="#first-page"><span class="logo">Devolam</span></a></div>
+        <ul class="nav-links">
+            <li><a href="#first-page" style="color: rgb(0, 123, 255); font-weight: bold;">Home</a></li>
+            <li><a href="#second-page">Services</a></li>
+            <li><a href="#third-page">Projects</a></li>
+            <li><a href="#fifth-page">Skills</a></li>
+            <li><a href="#sixth-page">Contact</a></li>
+            <li></li>
+        </ul>
+    </nav>
+    <section id="first-page">
+        <iframe src="resume.html" frameborder="0"
+            style=" height: 100%; width: 100%; z-index: 800; position: absolute; left: 0%; display: none; "
+            id="resume"></iframe>
+        <img src="trans smile.png" alt="my_image" class="his_image">
+        <p class="frontend_dev">FRONTEND DEVELOPER</p>
+        <button id="resume_btn" class="resume_btn" onclick="resumePopup()">Résumé <span
+                class="resume_arrow">></span></button>
+        <!--<hr style="top: 28%; position: relative">-->
+        <p>
+        <div class="typing" id="autotype">
+        </div>
+        </p>
+    </section>
+    <section id="second-page">
+        <h1 class="quality_services">MY QUALITY SERVICES</h1>
+        <p class="services_intro">We put your ideas and thus your wishes in the form of a unique web project that
+            inspires you and you
+            customers.</p>
+
+        <p class="responsive_design"><span class="quality_services_number">01</span> Responsive Design <span
+                class="quality_services_span">Ensure your website looks great on any device, with layouts
+                and adapts to different
+                screen sizes seamlessly.</span><span class="quality_services_arrow">➚</span></p>
+
+
+        <p class="responsive_design"><span class="quality_services_number">02</span> Custom Web-Design <span
+                class="quality_services_span">Responsive, modern websites for businesses, portfolios, brands, and
+                personal use.</span><span class="quality_services_arrow">➚</span></p>
+
+        <p class="responsive_design"><span class="quality_services_number">03</span> Website Redesign <span
+                class="quality_services_span">Improve outdated websites with better UI/UX, speed, and
+                responsiveness.</span><span class="quality_services_arrow">➚</span></p>
+
+        <p class="responsive_design"><span class="quality_services_number">04</span> Frontend Development <span
+                class="quality_services_span">Clean, optimized HTML, CSS, JavaScript (React, Vue)
+                interfaces.</span><span class="quality_services_arrow">➚</span></p>
+
+    </section>
+    <section id="third-page">
+        <h1 class="recent_works">My Recent Works</h1>
+        <p class="services_intro">We put your ideas and thus your wishes in the form of a unique web project that
+            inspires you and you
+            customers.</p>
+        <div id="projects">
+            <img src="Screenshot 2025-06-26 at 21.40.56.png" alt="project1" class="project1">
+            <img src="Screenshot 2025-06-27 at 21.06.28.png" alt="project2" class="project2">
+            <img src="Screenshot 2025-06-26 at 21.43.23.png" alt="project3" class="project3">
+            <img src="Screenshot 2025-06-26 at 21.46.19.png" alt="project4" class="project4">
+            <img src="Screenshot 2025-06-21 at 14.01.20.png" alt="project5" class="project5">
+            <img src="movie website.png" alt="project6" class="project6">
+        </div>
+    </section>
+    <section id="fourth-page"></section>
+    <section id="fifth-page">
+        <h1 class="my_skils">MY SKILLS</h1>
+        <p class="services_intro">We put your ideas and thus your wishes in the form of a unique web project that
+            inspires you and you
+            customers.</p>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="html_icon-removebg-preview.png" alt="HTML Icon">
+                <span class="skill-percentage">92%</span>
+                <p class="skill-name">HTML</p>
+            </div>
+            <div class="skill-card">
+                <img src="css_icon2-removebg-preview.png" alt="CSS3 Icon">
+                <span class="skill-percentage">95%</span>
+                <p class="skill-name">CSS3</p>
+            </div>
+            <div class="skill-card">
+                <img src="js_icon-removebg-preview.png" alt="Javascript Icon">
+                <span class="skill-percentage">85%</span>
+                <p class="skill-name">Javascript</p>
+            </div>
+            <!--<div class="skill-card">
+                    <img src="path/to/wordpress-icon.png" alt="WordPress Icon">
+                    <span class="skill-percentage">79%</span>
+                    <p class="skill-name">WordPress</p>
+                </div>
+                <div class="skill-card">
+                    <img src="path/to/react-icon.png" alt="React/JS/React Native Icon">
+                    <span class="skill-percentage">89%</span>
+                    <p class="skill-name">ReactJS/React Native</p>
+                </div>
+                <div class="skill-card">
+                    <img src="path/to/flutter-icon.png" alt="Flutter Icon">
+                    <span class="skill-percentage">63%</span>
+                    <p class="skill-name">Flutter</p>
+                </div>
+            </div>-->
+    </section>
+    <section id="sixth-page">
+        <main class="contact-section container">
+
+            <div class="contact-form-container">
+                <p class="collab">Let’s work together!</p>
+                <p class="collab_intro">I design and code beautifully simple things and I love what I do. Just simple
+                    like that!</p>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Write a Comment" required></textarea>
+                    <button type="submit" class="send-message-btn">Send a Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    📞 <a href="https://wa.me/+2347041545267">+234 704 154 5267</a>
+                </div>
+                <div class="contact-info-item">
+                    ✉️ <a href="mailto:socialmeda03@gmail.com">socialmeda03@gmail.com</a>
+                </div>
+                <div class="contact-info-item">
+                    📍 Lagos, Nigeria
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container footer-content">
+                <div class="footer-logo"><a href="#first-page">
+                        Devolam</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#second-page">Services</a></li>
+                        <li><a href="#third-page">Projects</a></li>
+                        <li><a href="#fifth-page">Skills</a></li>
+                        <li><a href="https://wa.me/+2347041545267">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    &copy; 2025 All rights reserved by <a href="#first-page"><span
+                            class="devolam_footer">Devolam</span></a>
+                </div>
+            </div>
+            <a href="#top" class="scroll-to-top">&#8593;</a>
+        </footer>
+
+    </section>
+    <a href="https://wa.me/+2347041545267"><button id="connect"
+            style="position: fixed; z-index: 1000; cursor: pointer;">📞</button></a>
+    <script src="script.js"></script>
+</body>
+
+</html>

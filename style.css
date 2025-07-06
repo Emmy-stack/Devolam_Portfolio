@@ -1,0 +1,927 @@
+section {
+  height: 100vh;
+  padding: 50px;
+  position: relative;
+  scroll-snap-align: start;
+}
+/*html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}*/
+body {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  background-color: rgb(1, 1, 24);
+  background-size: cover; /* Makes it fill the screen */
+  background-position: center; /* Centers the image */
+}
+#top_container {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  background-color: rgb(1, 1, 24);
+  z-index: 900;
+}
+a {
+  text-decoration: none;
+}
+button {
+  color: white;
+  position: absolute;
+  background-color: rgb(120, 50, 241);
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(46, 4, 119);
+}
+
+.navbar {
+  left: 10%;
+  top: 5%;
+  border: 2px solid rgb(79, 79, 104);
+  border-radius: 15px;
+  background-color: rgb(1, 1, 24); /* Transparent black */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed;
+  z-index: 1000;
+  width: 80%;
+}
+
+.logo {
+  font-family: cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: white; /* Orange to pink */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;
+  position: relative;
+  left: 10%;
+  cursor: pointer;
+  /*text-shadow: 0 0 10px #13609f, 0 0 20px #025a8d, 0 0 30px #025a8d;*/
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(228, 202, 244);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+  color: rgb(0, 123, 255);
+}
+
+/* 📱 Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+#connect {
+  color: white;
+  font-size: 30px;
+  border: 5px solid;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: green;
+  top: 90%;
+  left: 95%;
+}
+.frontend_dev {
+  position: relative;
+  font-size: 70px;
+  left: 7%;
+  top: 10%;
+  width: 500px;
+  background: linear-gradient(
+    90deg,
+    rgb(127, 9, 190),
+    #13679f,
+    #138f9f
+  ); /* Gradient from purple to blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;
+  letter-spacing: 7px;
+}
+.typing {
+  color: rgb(228, 202, 244);
+  width: 500px;
+  position: relative;
+  top: -7%;
+  left: 7%;
+  font-size: 20px;
+  cursor: pointer;
+  animation: right 2s ease;
+}
+/*@keyframes right {
+  0% {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}*/
+.resume_btn {
+  background: linear-gradient(90deg, rgb(127, 9, 190), #13679f, #138f9f);
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;
+  position: relative;
+  background-color: transparent;
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  top: 150px;
+  left: 7%;
+  cursor: pointer;
+  font-size: 15px;
+  border-color: rgb(127, 9, 190);
+  box-shadow: 2px 2px 1px 1px rgba(0, 255, 255, 0.7);
+}
+.resume_btn:hover {
+  word-spacing: 5px;
+}
+.his_image {
+  width: 700px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+.quality_services {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  top: 10%;
+  left: 22%;
+  font-size: 50px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgb(127, 9, 190),
+    #13679f,
+    #138f9f
+  ); /* Gradient from purple to blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  letter-spacing: 7px;
+  color: transparent;
+  width: 800px;
+}
+.services_intro {
+  width: 750px;
+  text-align: center;
+  position: relative;
+  left: 20.5%;
+  top: 8%;
+  color: rgb(219, 216, 216);
+  font-size: 20px;
+}
+.quality_services_number {
+  color: rgb(0, 123, 255);
+}
+.responsive_design {
+  position: relative;
+  color: white;
+  font-size: 30px;
+  top: 15%;
+  left: 5%;
+  font-weight: bolder;
+  border: 2px solid;
+  width: 1100px;
+  height: 50px;
+  cursor: pointer;
+  padding: 20px; /* even space on all sides */
+  border-color: rgb(4, 4, 35);
+}
+.responsive_design:hover {
+  background: linear-gradient(to right, #0362c0, #021e3a) border-box;
+  border: transparent;
+}
+.responsive_design:hover .quality_services_number {
+  color: white;
+}
+.quality_services_span {
+  font-weight: lighter;
+  position: absolute;
+  font-size: 17px;
+  left: 40%;
+  width: 500px;
+}
+.quality_services_arrow {
+  position: absolute;
+  left: 90%;
+}
+.recent_works {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  top: 10%;
+  left: 29%;
+  font-size: 50px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgb(127, 9, 190),
+    #13679f,
+    #138f9f
+  ); /* Gradient from purple to blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  letter-spacing: 7px;
+  color: transparent;
+  width: 800px;
+}
+#projects {
+  left: 11%;
+  position: relative;
+  top: 20%;
+}
+.project1 {
+  width: 400px;
+  color: rgba(0, 123, 255, 0.061);
+  border: 30px solid;
+  border-radius: 10px;
+  border-bottom: none;
+  cursor: pointer;
+}
+.project1:hover {
+  width: 1000px;
+  position: absolute;
+  z-index: 5;
+  left: 0%;
+}
+.project2 {
+  width: 400px;
+  color: rgba(0, 123, 255, 0.061);
+  border: 30px solid;
+  border-radius: 10px;
+  position: relative;
+  left: 5%;
+  border-bottom: none;
+  cursor: pointer;
+}
+.project2:hover {
+  width: 1000px;
+  position: absolute;
+  z-index: 5;
+  left: 0%;
+}
+.project3 {
+  width: 400px;
+  color: rgba(0, 123, 255, 0.061);
+  border: 30px solid;
+  border-radius: 10px;
+  position: relative;
+  top: 30px;
+  border-bottom: none;
+  cursor: pointer;
+}
+.project3:hover {
+  width: 1000px;
+  position: absolute;
+  z-index: 5;
+  left: 0%;
+}
+.project4 {
+  width: 400px;
+  color: rgba(0, 123, 255, 0.061);
+  border: 30px solid;
+  border-radius: 10px;
+  position: relative;
+  left: 5%;
+  top: 30px;
+  border-bottom: none;
+  cursor: pointer;
+}
+.project4:hover {
+  width: 1000px;
+  position: absolute;
+  z-index: 5;
+  left: 0%;
+}
+.project5 {
+  width: 400px;
+  color: rgba(0, 123, 255, 0.061);
+  border: 30px solid;
+  border-radius: 10px;
+  position: relative;
+  top: 60px;
+  border-bottom: none;
+  height: 250px;
+  cursor: pointer;
+  z-index: 1;
+}
+/*.project5:hover {
+  width: 1000px;
+  position: absolute;
+  z-index: 5;
+  left: 0%;
+  height: auto;
+}*/
+.project6 {
+  width: 400px;
+  color: rgba(0, 123, 255, 0.061);
+  border: 30px solid;
+  border-radius: 10px;
+  position: relative;
+  top: 60px;
+  border-bottom: none;
+  height: 250px;
+  left: 5%;
+  cursor: pointer;
+}
+.project6:hover {
+  width: 1000px;
+  position: absolute;
+  z-index: 5;
+  left: 0%;
+  height: auto;
+}
+.my_skils {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  top: 10%;
+  left: 37%;
+  font-size: 50px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgb(127, 9, 190),
+    #13679f,
+    #138f9f
+  ); /* Gradient from purple to blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  letter-spacing: 7px;
+  color: transparent;
+  width: 800px;
+}
+/* My Skills Section Styling */
+.my-skills-section {
+  padding: 80px 0; /* Adjust padding as needed */
+  text-align: center;
+  background-color: #1a0b38; /* Ensure consistent background */
+}
+
+.section-title {
+  font-size: 3em; /* Adjust size */
+  color: #cb53f1; /* Purple color from the image */
+  margin-bottom: 20px;
+  position: relative; /* For potential underline or other effects */
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 50px auto; /* Center and add space below */
+  line-height: 1.6;
+}
+
+/* Skills Grid (Flexbox or Grid) */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px; /* Space between cards */
+  justify-content: center; /* Center items if they don't fill the row */
+}
+
+/* Skill Card Styling */
+.skill-card {
+  top: 30%;
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.061
+  ); /* Slightly lighter purple for card background */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Use flexbox for content inside card */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  position: relative; /* For positioning percentage */
+  overflow: hidden; /* To keep percentage within bounds if it overlaps */
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.skill-card img {
+  width: 80px; /* Adjust icon size */
+  height: 80px;
+  margin-bottom: 15px;
+  /*filter: grayscale(100%) brightness(0) invert(1) saturate(0%);  Makes images white/gray if they are colored */
+  opacity: 0.7; /* Slight transparency */
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover img {
+  opacity: 1;
+}
+
+.skill-percentage {
+  font-size: 1.8em; /* Size of the percentage text */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  /* Positioning for the percentage */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true centering */
+  z-index: 1; /* Ensure it's above other elements if needed */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover .skill-percentage {
+  opacity: 1; /* Show on hover */
+}
+
+.skill-name {
+  font-size: 1.3em;
+  color: #eee;
+  margin-top: 100px; /* Pushes name down to accommodate percentage */
+  font-weight: bold;
+}
+/* Main Content - Contact Section */
+.contact-section {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center; /* Center the content block */
+  align-items: flex-start;
+  gap: 60px; /* Space between form and info */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contact-form-container {
+  background-color: rgba(0, 123, 255, 0.061);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  flex: 1; /* Allow form to grow */
+  min-width: 350px; /* Minimum width for the form */
+  max-width: 500px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.collab {
+  top: -30px;
+  position: relative;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+}
+.collab_intro {
+  font-size: 20px;
+  top: -60px;
+  position: relative;
+  color: white;
+}
+.form-group {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 95%;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  color: black;
+  font-size: 1em;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgb(94, 94, 94);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.send-message-btn {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #6a1b9a, #8c2dc7); /* Gradient button */
+  color: var(--text-color);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.send-message-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+  font-size: 20px;
+  flex: 0.8; /* Allow info to take up less space */
+  min-width: 300px; /* Minimum width for info block */
+  padding-top: 20px; /* Align with form top */
+  position: relative;
+  top: 500px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  color: white;
+}
+
+.contact-info-item i {
+  /* Placeholder for icons */
+  font-size: 1.5em;
+  margin-right: 15px;
+  color: rgb(219, 216, 216);
+}
+
+.contact-info-item a {
+  color: rgb(0, 123, 255);
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-bg);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.devolam_footer {
+  font-family: cursive;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: cursive;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.footer-nav {
+  margin-bottom: 20px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: var(--link-color);
+}
+
+.copyright {
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.copyright span {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.8em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top:hover {
+  background-color: #8c2dc7;
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /*.navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }*/
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contact-form-container,
+  .contact-info {
+    max-width: 90%; /* Adjust width for smaller screens */
+    min-width: unset;
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5em;
+  }
+  .nav-links {
+    font-size: 0.9em;
+    gap: 15px;
+  }
+  .hire-me-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+  .contact-form-container {
+    position: relative;
+    top: 500px;
+    padding: 25px;
+    left: -3%;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 0.9em;
+  }
+  .send-message-btn {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+  .contact-info{
+    display: none;
+  }
+  .contact-info-item {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+  .footer-logo {
+    font-size: 1.8em;
+  }
+  .copyright {
+    font-size: 0.8em;
+  }
+  footer{
+    position: relative;
+    top: 60%;
+  }
+}
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust column size for smaller screens */
+  }
+  .skill-card {
+    padding: 20px;
+  }
+  .skill-card img {
+    width: 60px;
+    height: 60px;
+  }
+  .skill-percentage {
+    font-size: 1.5em;
+  }
+  .skill-name {
+    font-size: 1.1em;
+  }
+  .section-title {
+    font-size: 2.5em;
+  }
+  .section-description {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+  .skill-card {
+    top: 130%;
+    width: 300px; /* Limit width of single column cards */
+    margin: 0 auto; /* Center single column cards */
+  }
+}
+@media (max-width: 480px) {
+  /*html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }*/
+  /* Navbar fix */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: transparent;
+    position: static;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  #connect {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    left: 85%;
+    top: 90%;
+  }
+  .frontend_dev {
+    font-size: 50px;
+    left: -3%;
+  }
+  .typing {
+    top: 0%;
+    left: -3%;
+    width: 350px;
+  }
+  .resume_btn {
+    top: 450px;
+    left: -3%;
+  }
+  .his_image {
+    left: -30%;
+    top: 34%;
+  }
+  .quality_services {
+    font-size: 30px;
+    width: 300px;
+    left: 3%;
+    text-align: center;
+  }
+  .services_intro {
+    width: 400px;
+    left: -14%;
+  }
+  .responsive_design {
+    width: 370px;
+    left: -14%;
+  }
+  .quality_services_span {
+    display: none;
+  }
+  .recent_works {
+    font-size: 30px;
+    width: 300px;
+    left: 3%;
+    text-align: center;
+  }
+  #projects {
+    left: -14%;
+  }
+  .project1 {
+    width: 350px;
+  }
+  .project2 {
+    width: 350px;
+    left: 0%;
+    top: 20px;
+  }
+  .project3 {
+    width: 350px;
+    top: 40px;
+  }
+  .project4 {
+    width: 350px;
+    left: 0%;
+    top: 60px;
+  }
+  .project5 {
+    width: 350px;
+    top: 80px;
+  }
+  .project6 {
+    width: 350px;
+    left: 0%;
+    top: 100px;
+  }
+  .my_skils{
+    top: 40%;
+    left: 0%;
+  }
+  #fifth-page .services_intro{
+    top: 37%;
+  }
+}
