@@ -4,11 +4,11 @@ section {
   position: relative;
   scroll-snap-align: start;
 }
-/*html {
+html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}*/
+  /*scroll-snap-type: y mandatory;
+  overflow-y: scroll;*/
+}
 body {
   margin: 0;
 
@@ -17,6 +17,11 @@ body {
   background-color: rgb(1, 1, 24);
   background-size: cover; /* Makes it fill the screen */
   background-position: center; /* Centers the image */
+}
+@media (max-width: 480px) {
+  body{
+    width: 100%;
+  }
 }
 #top_container {
   position: fixed;
@@ -110,19 +115,13 @@ button:hover {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    top: 3%;
+    left: 6%;
+    width: 300px;
   }
+  
 }
-#connect {
-  color: white;
-  font-size: 30px;
-  border: 5px solid;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  background-color: green;
-  top: 90%;
-  left: 95%;
-}
+
 .frontend_dev {
   position: relative;
   font-size: 70px;
@@ -177,6 +176,12 @@ button:hover {
   font-size: 15px;
   border-color: rgb(127, 9, 190);
   box-shadow: 2px 2px 1px 1px rgba(0, 255, 255, 0.7);
+  
+}
+@media (max-width: 480px) {
+  .resume_btn{
+    top: 200px;
+  }
 }
 .resume_btn:hover {
   word-spacing: 5px;
@@ -285,10 +290,6 @@ button:hover {
   cursor: pointer;
 }
 .project1:hover {
-  width: 1000px;
-  position: absolute;
-  z-index: 5;
-  left: 0%;
 }
 .project2 {
   width: 400px;
@@ -301,10 +302,6 @@ button:hover {
   cursor: pointer;
 }
 .project2:hover {
-  width: 1000px;
-  position: absolute;
-  z-index: 5;
-  left: 0%;
 }
 .project3 {
   width: 400px;
@@ -317,10 +314,6 @@ button:hover {
   cursor: pointer;
 }
 .project3:hover {
-  width: 1000px;
-  position: absolute;
-  z-index: 5;
-  left: 0%;
 }
 .project4 {
   width: 400px;
@@ -334,10 +327,6 @@ button:hover {
   cursor: pointer;
 }
 .project4:hover {
-  width: 1000px;
-  position: absolute;
-  z-index: 5;
-  left: 0%;
 }
 .project5 {
   width: 400px;
@@ -371,11 +360,6 @@ button:hover {
   cursor: pointer;
 }
 .project6:hover {
-  width: 1000px;
-  position: absolute;
-  z-index: 5;
-  left: 0%;
-  height: auto;
 }
 .my_skils {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -759,7 +743,7 @@ footer {
     padding: 12px 20px;
     font-size: 1em;
   }
-  .contact-info {
+  .contact-info{
     display: none;
   }
   .contact-info-item {
@@ -772,7 +756,7 @@ footer {
   .copyright {
     font-size: 0.8em;
   }
-  footer {
+  footer{
     position: relative;
     top: 60%;
   }
@@ -817,6 +801,9 @@ footer {
   }
 }
 @media (max-width: 480px) {
+  section {
+    height: 750px;
+  }
   /*html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -858,12 +845,12 @@ footer {
     width: 350px;
   }
   .resume_btn {
-    top: 450px;
+    top: 490px;
     left: -3%;
   }
   .his_image {
     left: -30%;
-    top: 34%;
+    top: 33%;
   }
   .quality_services {
     font-size: 30px;
@@ -917,37 +904,37 @@ footer {
     left: 0%;
     top: 100px;
   }
-  .my_skils {
+  .my_skils{
     top: 40%;
     left: 0%;
   }
-  #fifth-page .services_intro {
+  #fifth-page .services_intro{
     top: 37%;
   }
 }
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px; /* Distance from bottom */
-  left: 20px; /* Distance from left */
-  background-color: #25d366; /* WhatsApp green */
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Ensure it's above other content */
-  text-decoration: none;
-  transition: transform 0.2s ease-in-out;
+    position: fixed;
+    bottom: 20px; /* Distance from bottom */
+    left: 20px; /* Distance from left */
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other content */
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .whatsapp-float i {
-  color: white; /* Ensure the icon itself is white */
+    color: white; /* Ensure the icon itself is white */
 }
